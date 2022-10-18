@@ -134,7 +134,7 @@
           }
         } 
       
-  - 이메일 확인&인증
+  - 이메일 위젯 생성&인증
   -     class EmailInput extends StatelessWidget {
           @override
           Widget build(BuildContext context) {
@@ -155,7 +155,7 @@
           }
         }
 
-  - 비밀번호 확인&인증
+  - 비밀번호 &인증
   -     class PasswordInput extends StatelessWidget {
           @override
           Widget build(BuildContext context) {
@@ -235,4 +235,136 @@
           }
         }
 
-- 
+- 회원가입 RegisterScreen ( register.dart ) 뼈대 
+-     class RegisterScreen extends StatelessWidget {
+        @override
+        Widget build(BuildContext context) {
+           return ChangeNotifierProvider(
+            create: (_) => RegisterFieldModel(),
+            child: Scaffold(
+               appBar: AppBar(
+                  title: Text("회원가입 화면"),
+               ),
+               body: Column(
+                children: [
+                  EmailInput(),
+                  PasswordInput(),
+                  PasswordConfirmInput(),
+                  RegisterButton(),
+                ],
+              ),
+            ),
+          );
+        }
+      }
+  
+  - 회원가입 이메일 가입&생성
+  -     class EmailInput extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            final registerField =
+            Provider.of<RegisterFieldModel>(context, listen: false);
+            return Container(
+              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+              child: TextField(
+                onChanged: (email) {
+                  registerField.setEmail(email);
+                },
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: '이메일',
+                  helperText: '',
+                ),
+               ),
+              );
+            }
+           }
+  
+  - 회원가입 패스워드 가입&생성
+  -     class PasswordInput extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            final registerField =
+            Provider.of<RegisterFieldModel>(context, listen: false);
+            return Container(
+              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+              child: TextField(
+                onChanged: (password) {
+                registerField.setPassword(password);
+                },
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: '비밀번호',
+                  helperText: '',
+                ),
+              ),
+            );
+          }
+        }
+  
+  - 패스워드 확인 가입&생성
+  -     class PasswordConfirmInput extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            final registerField = Provider.of<RegisterFieldModel>(context);
+            return Container(
+              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+              child: TextField(
+                onChanged: (password) {
+                registerField.setPasswordConfirm(password);
+              },
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: '비밀번호 확인',
+                helperText: '',
+                errorText: registerField.password != registerField.passwordConfirm
+                    ? '비밀번호가 일치하지 않습니다.'
+                    : null,
+                ),
+              ),
+            );
+          }
+        }
+  
+  - 회원가입 버튼 생성
+  -     class RegisterButton extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            final authClient =
+            Provider.of<FirebaseAuthProvider>(context, listen: false);
+            final registerField =
+            Provider.of<RegisterFieldModel>(context, listen: false);
+            return Container(
+              width: MediaQuery.of(context).size.width * 0.85,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+    
+  
+  - 회원가입을 할때 이메일과 패스워드가 turn일때 스낵바가 생긴다
+  -      onPressed: () async {
+          await authClient
+              .registerWithEmail(registerField.email, registerField.password)
+              .then((registerStatus) {
+            if (registerStatus == AuthStatus.registerSuccess) {
+              ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(
+                  SnackBar(content: Text('회원가입이 완료되었습니다!')),
+                );
+              Navigator.pop(context);
+  
+  - 회원가입을 할때 이메일과 패스워드 둘중 하나가 false일때 스낵바가 생기고 회원가입화면으로 돌아감
+  -                   ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(
+                  SnackBar(content: Text('회원가입을 실패했습니다. 다시 시도해주세요.')),
+                );
+            }
+          });
+        },
+        child: Text('회원가입'),
