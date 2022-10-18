@@ -32,4 +32,11 @@
   -     ChangeNotifierProvider(create: (context) => FirebaseAuthProvider()),
   -           ChangeNotifierProvider(create: (context) => LoginFieldModel()),
   
- #### bookㅇ
+ #### book앱으로 main.dart에서 login.screen.dart까지 동작원리 
+
+-   void main() async {
+      WidgetsFlutterBinding.ensureInitialized();
+      await Firebase.initializeApp();
+      runApp(MyApp());
+    }
+    다른 언어와 비슷하게 void main이 먼저 시작이 되고 
