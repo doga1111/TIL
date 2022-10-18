@@ -345,7 +345,7 @@
                 ),
     
   
-  - 회원가입을 할때 이메일과 패스워드가 turn일때 스낵바가 생긴다
+  - 회원가입을 할때 이메일과 패스워드가 turn일때 스낵바가 생기고 텍스트 ('회원가입이 완료되었습니다!') 가 하단에 나온다.
   -      onPressed: () async {
           await authClient
               .registerWithEmail(registerField.email, registerField.password)
@@ -358,7 +358,7 @@
                 );
               Navigator.pop(context);
   
-  - 회원가입을 할때 이메일과 패스워드 둘중 하나가 false일때 스낵바가 생기고 회원가입화면으로 돌아감
+  - 회원가입을 할때 이메일과 패스워드 둘중 하나가 false일때 스낵바가 생기고 텍스트 (회원 가입을 실패했습니다. 다시 시도해주세요.')가 하단에 나오면서 회원가입화면으로 돌아감
   -                   ScaffoldMessenger.of(context)
                 ..hideCurrentSnackBar()
                 ..showSnackBar(
