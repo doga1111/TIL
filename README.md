@@ -1,4 +1,4 @@
-# # 개발일기
+#  개발일기
 #### 2022년 10월 17일 화요일
 ### provider& book앱 분석
 
@@ -19,7 +19,7 @@
 
 ## final loginField = Provider.of<LoginFieldModel>(context, listen: false); 부모의 LoginFielModel를 찾을려면 
 
- My app 
+ @My app 
  MaterialApp
  LoginScreen
  부모의 provider LoginFielModel 
