@@ -106,3 +106,32 @@
             ], child: LoginScreen(),),
           ),
         );
+
+  - 로그인 스크린 위젯안에 뼈대를 만들고 이메일&비밀번호&로그인버튼&패딩&회원가입버튼을 인풋을 한다.
+  -     class LoginScreen extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            return ChangeNotifierProvider(
+              create: (_) => LoginFieldModel(),
+              child: Scaffold(
+                appBar: AppBar(
+                  title: Text("로그인 화면"),
+                ),
+                body: Column(
+                  children: [
+                    EmailInput(),
+                    PasswordInput(),
+                    LoginButton(),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Divider(thickness: 1),
+                    ),
+                    RegisterButton(),
+                  ],
+                ),
+              ),
+            );
+          }
+        } 
+      
+  -   
