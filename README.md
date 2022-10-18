@@ -22,7 +22,7 @@
         this.child,
        })
  
-- padding은 Container 내부의 공간을 의미하고 Color는 배경색을 의미합니다. margin은 Container 외부의 공간을 의미합니다.
+-       padding은 Container 내부의 공간을 의미하고 Color는 배경색을 의미합니다. margin은 Container 외부의 공간을 의미합니다.
 
 ##### provider는 하나의 상태조각의 압축(encapsulates)된 객체이자 상태의 변화를 감시하는 역할을 가지고 있다. StateLessWidget(상태가 없는) StateFulWidget(상태가 있는)
 
