@@ -9,22 +9,22 @@
 
 ##  Provider.of<FirebaseAuthProvider>(context, listen: false);  부모의 FirebaseAuthProvider를 찾을려면
 
-## My app 
-## provider 는  Materialapp 부모노드  자식노드에게 provider를 연결할 수 있다. 
-## MaterialApp 
-## LoginScreen
-## body
-## LoginButton 
-## Provider.of<FirebaseAuthProvider>(context, listen: false);
+ My app 
+ provider 는  Materialapp 부모노드  자식노드에게 provider를 연결할 수 있다. 
+ MaterialApp 
+ LoginScreen
+ body
+ LoginButton 
+ Provider.of<FirebaseAuthProvider>(context, listen: false);
 
 ## final loginField = Provider.of<LoginFieldModel>(context, listen: false); 부모의 LoginFielModel를 찾을려면 
 
-## My app 
-## MaterialApp
-## LoginScreen
-## 부모의 provider LoginFielModel 
-## return ChangeNotifierProvider(   create: (_) => LoginFielModel 
-## body
-## LoginButton
-## final loginField = Provider.of<LoginFieldModel>(context, listen: false);
+ My app 
+ MaterialApp
+ LoginScreen
+ 부모의 provider LoginFielModel 
+ return ChangeNotifierProvider(   create: (_) => LoginFielModel 
+ body
+ LoginButton
+ final loginField = Provider.of<LoginFieldModel>(context, listen: false);
 
