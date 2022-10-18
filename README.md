@@ -2,8 +2,8 @@
 ## 2022년 10월 17일 화요일
 ### provider& book앱 분석
 
-
-#### provider는 하나의 상태조각의 압축(encapsulates)된 객체이자 상태의 변화를 감시하는 역할을 가지고 있다. StateLessWidget(상태가 없는) StateFulWidget(상태가 있는)
+#### 오늘 배운 내용들 
+##### provider는 하나의 상태조각의 압축(encapsulates)된 객체이자 상태의 변화를 감시하는 역할을 가지고 있다. StateLessWidget(상태가 없는) StateFulWidget(상태가 있는)
 
 
 #####  Provider.of<FirebaseAuthProvider>(context, listen: false);  부모의 FirebaseAuthProvider를 찾을려면
@@ -234,3 +234,5 @@
             );
           }
         }
+
+- 
