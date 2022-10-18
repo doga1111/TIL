@@ -6,7 +6,7 @@
 #### provider는 하나의 상태조각의 압축(encapsulates)된 객체이자 상태의 변화를 감시하는 역할을 가지고 있다. StateLessWidget(상태가 없는) StateFulWidget(상태가 있는)
 
 
-##  Provider.of<FirebaseAuthProvider>(context, listen: false);  부모의 FirebaseAuthProvider를 찾을려면
+#####  Provider.of<FirebaseAuthProvider>(context, listen: false);  부모의 FirebaseAuthProvider를 찾을려면
 
 - My app 
 - provider 는  Materialapp 부모노드  자식노드에게 provider를 연결할 수 있다. 
@@ -16,7 +16,7 @@
 - LoginButton 
 - Provider.of<FirebaseAuthProvider>(context, listen: false);
 
-## final loginField = Provider.of<LoginFieldModel>(context, listen: false); 부모의 LoginFielModel를 찾을려면 
+##### final loginField = Provider.of<LoginFieldModel>(context, listen: false); 부모의 LoginFielModel를 찾을려면 
 
 - My app 
 - MaterialApp
@@ -32,4 +32,4 @@
   -     ChangeNotifierProvider(create: (context) => FirebaseAuthProvider()),
   -           ChangeNotifierProvider(create: (context) => LoginFieldModel()),
   
- ## book 앱
+ #### bookㅇ
