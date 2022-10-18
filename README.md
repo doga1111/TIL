@@ -58,3 +58,12 @@
           @override
           _SplashScreenState createState() => _SplashScreenState();
         }
+  
+  - 먼저 실행되는 initState 는 2초라는 moveScreen이 띄워진다.
+  -       @override
+          void initState() {
+            super.initState();
+            Timer(Duration(seconds: 2), () {
+              moveScreen();
+            });
+          }
