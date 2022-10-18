@@ -212,9 +212,25 @@
                 ..showSnackBar(
                   SnackBar(content: Text('로그인에 실패했습니다. 다시 시도해주세요.')),
                 );
-            }
+             }
           });
         },
         child: Text('로그인'),
-      ),
-     );
+   
+  - 회원가입버튼 생성&인증 로그인 버튼이 눌르면 push가 뒤고 회원가입을 위해 RegisterScreen으로 이동
+  -     class RegisterButton extends StatelessWidget {
+          @override
+          Widget build(BuildContext context) {
+            final theme = Theme.of(context);
+            return TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RegisterScreen()));
+              },
+              child: Text(
+                '이메일로 간단하게 회원가입 하기',
+                style: TextStyle(color: theme.primaryColor),
+              ),
+            );
+          }
+        }
