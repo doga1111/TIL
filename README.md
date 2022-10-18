@@ -41,3 +41,14 @@
           runApp(MyApp());
       }
 
+  - Myapp statelessWidget 위젯이 실행이 되면서 텍스트 가 나오게됨 ('book app')
+  -    class MyApp extends StatelessWidget {
+        @override
+        Widget build(BuildContext context) {
+          return ChangeNotifierProvider(create: (context) => FirebaseAuthProvider(),
+          child: MaterialApp(
+            title: 'Book App',
+            home: SplashScreen(),
+          ));
+        }
+      }
