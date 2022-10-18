@@ -41,7 +41,7 @@
           runApp(MyApp());
       }
 
-  - Myapp statelessWidget 위젯이 실행이 되면서 텍스트 가 나오게됨 ('book app')
+  - Myapp statelessWidget 위젯이 실행이 되면서 텍스트 가 나오게됨 ('book app') 그리고 SplashScreen으로 이동이됨
   -     class MyApp extends StatelessWidget {
           @override
           Widget build(BuildContext context) {
@@ -51,4 +51,10 @@
               home: SplashScreen(),
             ));
           }
+        }
+  
+  - 상태가 있는 SplashScreen을 선언과 동시에 생성을 한다.
+  -     class SplashScreen extends StatefulWidget {
+          @override
+          _SplashScreenState createState() => _SplashScreenState();
         }
