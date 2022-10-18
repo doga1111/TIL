@@ -8,19 +8,19 @@
 - Container  _Container는 한 개의 자식을 갖는 레이아웃 위젯입니다.
 
 -     Container({
-    Key key,
-    this.alignment,
-    this.padding,
-    Color color,
-    Decoration decoration,
-    this.foregroundDecoration,
-    double width,
-    double height,
-    BoxConstraints constraints,
-    this.margin,
-    this.transform,
-    this.child,
-  })
+        Key key,
+        this.alignment,
+        this.padding,
+        Color color,
+        Decoration decoration,
+        this.foregroundDecoration,
+        double width,
+        double height,
+        BoxConstraints constraints,
+        this.margin,
+        this.transform,
+        this.child,
+       })
  
 - padding은 Container 내부의 공간을 의미하고 Color는 배경색을 의미합니다. margin은 Container 외부의 공간을 의미합니다.
 
