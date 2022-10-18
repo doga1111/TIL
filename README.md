@@ -67,3 +67,24 @@
               moveScreen();
             });
           }
+  
+  - moveScreen이 실행되고 다음 텍스쳐가 띄워진다.(bear story book)
+  -     @override
+        Widget build(BuildContext context) {
+          return Scaffold(
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'bear story book',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    '나만의 도서 : 나만의 도서목록 앱',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ),
+            ),
+          );
