@@ -34,7 +34,8 @@
   
  #### book앱으로 main.dart에서 login.screen.dart까지 동작원리 
 
--   void main() async {
+-   main.dart
+  void main() async {
       WidgetsFlutterBinding.ensureInitialized();
       await Firebase.initializeApp();
       runApp(MyApp());
