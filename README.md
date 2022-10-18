@@ -1,8 +1,29 @@
 #  개발일기
-## 2022년 10월 17일 요일
-### provider& book앱 분석
+## 2022년 10월 18일 화요일
+### provider&Container book앱 분석
 
 #### 오늘 배운 내용들 
+
+##### Container&Row&Column
+- Container  _Container는 한 개의 자식을 갖는 레이아웃 위젯입니다.
+
+-     Container({
+    Key key,
+    this.alignment,
+    this.padding,
+    Color color,
+    Decoration decoration,
+    this.foregroundDecoration,
+    double width,
+    double height,
+    BoxConstraints constraints,
+    this.margin,
+    this.transform,
+    this.child,
+  })
+ 
+- padding은 Container 내부의 공간을 의미하고 Color는 배경색을 의미합니다. margin은 Container 외부의 공간을 의미합니다.
+
 ##### provider는 하나의 상태조각의 압축(encapsulates)된 객체이자 상태의 변화를 감시하는 역할을 가지고 있다. StateLessWidget(상태가 없는) StateFulWidget(상태가 있는)
 
 
