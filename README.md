@@ -5,7 +5,7 @@
 #### 오늘 배운 내용들 
 
 ##### Container&Row&Column
-- Container  _Container는 한 개의 자식을 갖는 레이아웃 위젯입니다.
+- _Container는 한 개의 자식을 갖는 레이아웃 위젯입니다.
 
 -     Container({
         Key key,
@@ -23,6 +23,9 @@
        })
  
 -       padding은 Container 내부의 공간을 의미하고 Color는 배경색을 의미합니다. margin은 Container 외부의 공간을 의미합니다.
+
+- _Row는 "행" 이라고 한다. 가로 방향 집합을 의미한다.
+- _Column는 "열"이라고 한다. 세로 방향 집합을 의미한다.
 
 ##### provider는 하나의 상태조각의 압축(encapsulates)된 객체이자 상태의 변화를 감시하는 역할을 가지고 있다. StateLessWidget(상태가 없는) StateFulWidget(상태가 있는)
 
