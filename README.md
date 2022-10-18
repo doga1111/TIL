@@ -2,7 +2,7 @@
 ## 2022년 10월 18일 화요일
 ### 오늘 배운 내용들
 
-### provider&Container book앱 분석 
+### provider&Container&Row&Column flutter를 이용한 book앱 분석 
 
 #### Container&Row&Column
 - _Container는 한 개의 자식을 갖는 레이아웃 위젯입니다.
