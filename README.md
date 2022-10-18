@@ -88,3 +88,21 @@
               ),
             ),
           );
+
+  - 로그인이 true가 되었을때 ListScreen으로 이동
+  -     void moveScreen() async {
+          checkLogin().then((isLogin) {
+            if (isLogin) {
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => ListScreen(),
+                ),
+              );
+  - 로그인이 false가 되었을때 LoginScreen으로 이동
+  -     Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => MultiProvider(providers: [
+              ChangeNotifierProvider(create: (context) => LoginFieldModel()),
+            ], child: LoginScreen(),),
+          ),
+        );
