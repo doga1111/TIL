@@ -19,12 +19,12 @@
 
 ## final loginField = Provider.of<LoginFieldModel>(context, listen: false); 부모의 LoginFielModel를 찾을려면 
 
- @My app 
- MaterialApp
- LoginScreen
- 부모의 provider LoginFielModel 
- return ChangeNotifierProvider(   create: (_) => LoginFielModel 
- body
- LoginButton
- final loginField = Provider.of<LoginFieldModel>(context, listen: false);
+- My app 
+- MaterialApp
+- LoginScreen
+- 부모의 provider LoginFielModel 
+- return ChangeNotifierProvider(   create: (_) => LoginFielModel 
+- body
+- LoginButton
+- final loginField = Provider.of<LoginFieldModel>(context, listen: false);
 
