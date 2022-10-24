@@ -1,9 +1,9 @@
 # 개발일기
 ## 2022년 10월 24일 월요일
 ### 오늘 배운 내용들(변수,조건문 위주로 공부)
-#### late&final&if(조건문)&String
+#### late&final&String, if(조건문)
 
-##### late이란?
+#### late이란?
 다트에서는 late변수를 제공한다. late변수를 사용하면 non-nullable변수의 초기화를 나중에 할 수 있다. 헌데 한가지 의문점이 있다. 변수의 자료형을 nullable로 선언해도 나중에 초기화를 할 수 있으니 그냥 nullable을 쓰면 되지 왜 굳이 구글은 late라는 키워드를 만들었을까? 결론부터 말하면
 late대신 nullable로 선언할 경우, 개발자가 다른 사람에게 코드의 관리를 넘겼을 때, 넘겨받은 관리자가 null이라는 값도 변수에 의미있는 값으로 오해할 수 있기 때문이다.
 -           //Using null safety, incorrectly:
@@ -40,3 +40,26 @@ The late modifier lets you defer initaization, but still prohibits you from trea
 
 late키워드는 값의 초기화를 뒤로 미루지만, 개발지가 null을 실수로 사용하는것을 막아준다.
                       
+#### final&const 이란?
+final은 런타임(run-time)에, const는 컴파일타임(compile-time)에 초기화(initialize) 된다.
+그러므로 final과 const는 최종 값을 갖는 변수 이지만 사용되는 상황이 다르다. 
+값이 컴파일 단계에서 결정될 경우 const/런타임 단계에서 결정될 경우 final을 사용한다.
+
+- final&const 공통점
+ 선언과 초기화가 동시에 발생 
+ ex) finalconst name = 'Bob';
+
+ 초기화된 값은 변경 불가능 
+ ex) finalconst name = 'Bob';
+ name = 'Alice'; //Error: a final variable can only be set once. / Error: Constant variables can't be assigned a value
+
+- final%const 차이점 
+- final
+ 클래스의 인스턴스를 할당 가능
+ 값이 객체(Object)인 경우, 안의 요소는 변경 가능 
+ 
+ -const
+ 클래스의 인서튼스를 할당 불가
+ 값이 객체(Object)인 경우, 안의 요소도 변경 불가능 
+             
+        
