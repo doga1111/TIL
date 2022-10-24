@@ -5,21 +5,21 @@
 ##### late이란?
 다트에서는 late변수를 제공한다. late변수를 사용하면 non-nullable변수의 초기화를 나중에 할 수 있다. 헌데 한가지 의문점이 있다. 변수의 자료형을 nullable로 선언해도 나중에 초기화를 할 수 있으니 그냥 nullable을 쓰면 되지 왜 굳이 구글은 late라는 키워드를 만들었을까? 결론부터 말하면
 late대신 nullable로 선언할 경우, 개발자가 다른 사람에게 코드의 관리를 넘겼을 때, 넘겨받은 관리자가 null이라는 값도 변수에 의미있는 값으로 오해할 수 있기 때문이다.
--           Using null safety, incorrectly:
-    class Coffee {
-      String _temperature;
+-           //Using null safety, incorrectly:
+            class Coffee {
+                String _temperature;
 
-      void heat() { _temperature = 'hot'; }
-      void chill() { _temperature = 'iced'; }
+                void heat() { _temperature = 'hot'; }
+                void chill() { _temperature = 'iced'; }
 
-      String serve() => _temperature + ' coffee';
-    }
+                String serve() => _temperature + ' coffee';
+               }
 
-    main() {
-      var coffee = Coffee();
-      coffee.heat();
-      coffee.serve();
-     }
+               main() {
+                var coffee = Coffee();
+                coffee.heat();
+                coffee.serve();
+               }
     
-    이 코드는 에러가 난다. non nullable인 _temperature가 선언에도 초기화 되지 않고, 생성자에서도 초기화 되지 않았기 때문이다.
-    결론 : late키워드는 값의 초기화를 뒤로 미루지만, 개발자가 null을 실수로 사용하는것으 막아준다.
+                이 코드는 에러가 난다. non nullable인 _temperature가 선언에도 초기화 되지 않고, 생성자에서도 초기화 되지 않았기 때문이다.
+                결론 : late키워드는 값의 초기화를 뒤로 미루지만, 개발자가 null을 실수로 사용하는것으 막아준다.
