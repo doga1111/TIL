@@ -87,5 +87,30 @@ final은 런타임(run-time)에, const는 컴파일타임(compile-time)에 초�
           },
           child: Text('로그인'),
  
+ - if (loginStatus == AuthStatus.loginSuccess) 두개의 값이 일치(true)일때 
+ 
+ -          ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(
+                  SnackBar(content: Text(authClient.user!.email! + '님 환영합니다!')),
+                );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ListScreen()));
+                  
+ 스낵바가 생성 되면서 ListScreen으로 이동
+                  
+ - if (loginStatus == AuthStatus.loginSuccess) 두개의 값이 실패(false)일때 
+
+ -          ScaffoldMessenger.of(context)
+                ..hideCurrentSnackBar()
+                ..showSnackBar(
+                  SnackBar(content: Text('로그인에 실패했습니다. 다시 시도해주세요.')),
+                );
+               }
+            });
+          },
+          child: Text('로그인'),
+          
+스낵바가 생성 되면서 로그인으로 스크린으로 다시 이동
 
         
