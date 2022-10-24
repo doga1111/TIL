@@ -46,20 +46,20 @@ final은 런타임(run-time)에, const는 컴파일타임(compile-time)에 초�
 값이 컴파일 단계에서 결정될 경우 const/런타임 단계에서 결정될 경우 final을 사용한다.
 
 - final&const 공통점
- 선언과 초기화가 동시에 발생 
- ex) finalconst name = 'Bob';
+- 선언과 초기화가 동시에 발생 
+  ex) finalconst name = 'Bob';
 
- 초기화된 값은 변경 불가능 
- ex) finalconst name = 'Bob';
- name = 'Alice'; //Error: a final variable can only be set once. / Error: Constant variables can't be assigned a value
+- 초기화된 값은 변경 불가능 
+  ex) finalconst name = 'Bob';
+  name = 'Alice'; //Error: a final variable can only be set once. / Error: Constant variables can't be assigned a value
 
 - final%const 차이점 
 - final
- 클래스의 인스턴스를 할당 가능
- 값이 객체(Object)인 경우, 안의 요소는 변경 가능 
+  클래스의 인스턴스를 할당 가능
+  값이 객체(Object)인 경우, 안의 요소는 변경 가능 
  
  -const
- 클래스의 인서튼스를 할당 불가
- 값이 객체(Object)인 경우, 안의 요소도 변경 불가능 
+  클래스의 인서튼스를 할당 불가
+  값이 객체(Object)인 경우, 안의 요소도 변경 불가능 
              
         
