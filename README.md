@@ -35,6 +35,8 @@ late대신 nullable로 선언할 경우, 개발자가 다른 사람에게 코드
              }
              
 이를 방지하기 위해서 late라는 키워드를 사용하는 것이다. 구글에서는 late키워드에 대해 이렇게 말한다.
- The late modifier lets you defer initaization, but still prohibits you from treating it like a nullable variable.
-  late키워드는 값의 초기화를 뒤로 미루지만, 개발지가 null을 실수로 사용하는것을 막아준다.
+ 
+The late modifier lets you defer initaization, but still prohibits you from treating it like a nullable variable.
+
+late키워드는 값의 초기화를 뒤로 미루지만, 개발지가 null을 실수로 사용하는것을 막아준다.
                       
